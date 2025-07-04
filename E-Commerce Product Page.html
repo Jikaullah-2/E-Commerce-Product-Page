@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoply – Your One-Stop Store</title>
+    <style>
+      /* Reset & Base */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        background: #f5f7fa;
+        color: #333;
+        line-height: 1.5;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* Header */
+      header {
+        background: #fff;
+        border-bottom: 1px solid #e2e8f0;
+        padding: 0.75rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+      .logo img {
+        height: 40px;
+        margin-right: 0.5rem;
+      }
+      .logo h1 {
+        font-size: 1.25rem;
+        color: #2978f5;
+      }
+      nav a {
+        margin-left: 1.5rem;
+        font-size: 0.95rem;
+        color: #555;
+        transition: color 0.2s;
+      }
+      nav a:hover {
+        color: #2978f5;
+      }
+
+      /* Product Grid */
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+
+      /* Fix for heading inside grid */
+      .product-grid + div {
+        grid-column: 1 / -1;
+        width: 100%;
+        display: block;
+        margin-top: 2rem;
+      }
+
+      /* Product Card */
+      .product-card {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.2s, box-shadow 0.2s;
+        display: flex;
+        flex-direction: column;
+      }
+      .product-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      }
+      .product-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+      }
+      .product-info {
+        padding: 1rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .product-info h2 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        color: #1a202c;
+      }
+      .product-info p {
+        flex: 1;
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 1rem;
+      }
+      .btn {
+        background: #2978f5;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        text-align: center;
+        font-size: 0.9rem;
+        transition: background 0.2s;
+      }
+      .btn:hover {
+        background: #1f5dc1;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 1.5rem;
+        font-size: 0.85rem;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <img src="Z Logo.jpg" alt="Z Logo" />
+        <h1>The Global Bite</h1>
+      </div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <div style="font-size: large; text-align: center; color: #3d52a0">
+      <h1>Menu Highlights</h1>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid">
+      <!-- Product Cards -->
+      <div class="product-card">
+        <img
+          src="Spicy Korean Fried Chicken.jpg"
+          alt="Spicy Korean Fried Chicken"
+        />
+        <div class="product-info">
+          <h2>Spicy Korean Fried Chicken</h2>
+          <p>
+            Crispy double-fried chicken tossed in a sweet-and-spicy gochujang
+            glaze, topped with sesame seeds and served with pickled radish.
+          </p>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img
+          src="Margherita Pizza (Italy).jpg"
+          alt="Margherita Pizza (Italy)"
+        />
+        <div class="product-info">
+          <h2>Margherita Pizza (Italy)</h2>
+          <p>
+            Classic thin-crust pizza baked with vine-ripened tomatoes, creamy
+            mozzarella, fresh basil, and a drizzle of extra virgin olive oil.
+          </p>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img
+          src="Butter Paneer Masala (India).jpg"
+          alt="Butter Paneer Masala (India)"
+        />
+        <div class="product-info">
+          <h2>Butter Paneer Masala (India)</h2>
+          <p>
+            Cottage cheese cubes simmered in a velvety tomato-cream gravy
+            infused with warm spices and garnished with kasuri methi.
+          </p>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img
+          src="Thai Green Curry with Jasmine Rice.jpeg"
+          alt="Thai Green Curry"
+        />
+        <div class="product-info">
+          <h2>Thai Green Curry with Jasmine Rice</h2>
+          <p>
+            Aromatic Thai curry made from fresh green chilies, lemongrass, and
+            coconut milk, simmered with seasonal vegetables and served with
+            fluffy jasmine rice.
+          </p>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img
+          src="Mediterranean Quinoa Bowl.jpg"
+          alt="Mediterranean Quinoa Bowl"
+        />
+        <div class="product-info">
+          <h2>Mediterranean Quinoa Bowl</h2>
+          <p>
+            A colorful mix of quinoa, chickpeas, cherry tomatoes, cucumbers,
+            Kalamata olives, and feta, tossed in a lemon-oregano vinaigrette.
+          </p>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="Chocolate Lava Cake.jpg" alt="Chocolate Lava Cake" />
+        <div class="product-info">
+          <h2>Chocolate Lava Cake</h2>
+          <p>
+            Warm, rich chocolate cake with a gooey molten center, served with
+            vanilla bean ice cream and a dusting of cocoa powder.
+          </p>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+
+      <!-- Heading (inside grid but styled to start on new row) -->
+    </div>
+
+    <div style="font-size: large; text-align: center; color: #3d52a0">
+      <h1>🍽️ The Global Bite – Full Menu<br />Appetizers</h1>
+    </div>
+
+    <!-- Extra Products -->
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="Truffle Parmesan Fries.jpg" alt="Truffle Parmesan Fries" />
+        <div class="product-info">
+          <h2>Truffle Parmesan Fries</h2>
+          <p>
+            Golden shoestring fries tossed in truffle oil and grated Parmesan,
+            served with a garlic aioli dip.
+          </p>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="Tempura Prawns (Japan).jpg" alt="Tempura Prawns (Japan)" />
+        <div class="product-info">
+          <h2>Tempura Prawns (Japan)</h2>
+          <p>
+            Lightly battered and crisp-fried prawns served with tangy ponzu
+            dipping sauce.
+          </p>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img
+          src="Mezze Platter (Middle East).jpg"
+          alt="Mezze Platter (Middle East)"
+        />
+        <div class="product-info">
+          <h2>Mezze Platter (Middle East)</h2>
+          <p>
+            A sampler of creamy hummus, baba ghanoush, tabbouleh, dolmas, and
+            warm pita bread.
+          </p>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="font-size: large; text-align: center; color: #3d52a0">
+      <h1>Mains</h1>
+    </div>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <img
+          src="Chicken Tikka Masala (India).jpg"
+          alt="Chicken Tikka Masala (India)"
+        />
+        <div class="product-info">
+          <h2>Chicken Tikka Masala (India)</h2>
+          <p>
+            Tandoor-grilled chicken pieces in a creamy tomato-based sauce spiced
+            with garam masala and cardamom.
+          </p>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="Pad Thai (Thailand).jpg" alt="Pad Thai (Thailand)" />
+        <div class="product-info">
+          <h2>Pad Thai (Thailand)</h2>
+          <p>
+            Stir-fried rice noodles with tofu, shrimp, eggs, bean sprouts, and
+            crushed peanuts in a tamarind sauce.
+          </p>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img
+          src="Classic Cheeseburger (USA).jpg"
+          alt="Classic Cheeseburger (USA)"
+        />
+        <div class="product-info">
+          <h2>Classic Cheeseburger (USA)</h2>
+          <p>
+            Juicy beef patty with cheddar cheese, lettuce, tomato, pickles, and
+            house sauce on a toasted brioche bun.
+          </p>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="Falafel Wrap (Vegan).jpg" alt="Falafel Wrap (Vegan)" />
+        <div class="product-info">
+          <h2>Falafel Wrap (Vegan)</h2>
+          <p>
+            Crispy falafel wrapped with greens, pickled onions, and tahini sauce
+            in a soft flatbread.
+          </p>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img
+          src="Penne Arrabbiata (Italy).jpg"
+          alt="Penne Arrabbiata (Italy)"
+        />
+        <div class="product-info">
+          <h2>Penne Arrabbiata (Italy)</h2>
+          <p>
+            Penne pasta tossed in a bold, spicy tomato sauce with garlic, chili
+            flakes, and fresh parsley.
+          </p>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img
+          src="Moroccan Tagine (Morocco).jpg"
+          alt="Moroccan Tagine (Morocco)"
+        />
+        <div class="product-info">
+          <h2>Moroccan Tagine (Morocco)</h2>
+          <p>
+            Slow-cooked stew of chicken or lamb, apricots, almonds, and warm
+            spices, served with couscous.
+          </p>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="Sushi Bento Box (Japan).jpg" alt="Sushi Bento Box (Japan)" />
+        <div class="product-info">
+          <h2>Sushi Bento Box (Japan)</h2>
+          <p>
+            A curated assortment of nigiri, maki rolls, seaweed salad, and
+            tamago served with wasabi and soy sauce.
+          </p>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="font-size: large; text-align: center; color: #3d52a0">
+      <h1>Desserts</h1>
+    </div>
+    <div class="product-grid">
+      <div class="product-card">
+        <img
+          src="Mango Sticky Rice (Thailand).jpg"
+          alt="Mango Sticky Rice (Thailand)"
+        />
+        <div class="product-info">
+          <h2>Mango Sticky Rice (Thailand)</h2>
+          <p>
+            Sweet sticky rice served with ripe mango slices and a drizzle of
+            coconut cream.
+          </p>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="Tiramisu (Italy).jpg" alt="Tiramisu (Italy)" />
+        <div class="product-info">
+          <h2>Tiramisu (Italy)</h2>
+          <p>
+            Layers of espresso-soaked ladyfingers and mascarpone cream dusted
+            with cocoa powder.
+          </p>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="Gulab Jamun (India).jpg" alt="Gulab Jamun (India)" />
+        <div class="product-info">
+          <h2>Gulab Jamun (India)</h2>
+          <p>
+            Milk-solid dumplings soaked in saffron sugar syrup and garnished
+            with crushed pistachios.
+          </p>
+          <a href="#" class="btn">View Product</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>&copy; 2025 Shoply. All rights reserved.</footer>
+  </body>
+</html>
